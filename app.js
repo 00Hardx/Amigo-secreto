@@ -16,6 +16,7 @@ function agregarAmigo() {
     actualizarLista();
 }
 
+// Función para actualizar la lista de amigos en la interfaz
 function actualizarLista() {
     let lista = document.getElementById("listaAmigos");
     lista.innerHTML = ""; // Limpiar la lista actual
@@ -26,6 +27,7 @@ function actualizarLista() {
     });
 }
 
+// Función para sortear un amigo secreto
 function sortearAmigosSecreto() {
     if (amigos.length < 2) {
         document.getElementById("resultado").textContent = "Necesitas al menos dos amigos para hacer el sorteo.";
@@ -34,11 +36,4 @@ function sortearAmigosSecreto() {
     let indice = Math.floor(Math.random() * amigos.length);
     let amigoSeleccionado = amigos[indice];
     document.getElementById("resultado").textContent = `Tu amigo secreto seleccionado es: ${amigoSeleccionado}`;
-}
-
-function mostrarAmigo() {
-    console.log("Lista de amigos:");
-    amigos.forEach((nombre) => {
-        console.log(nombre);
-    });
 }
